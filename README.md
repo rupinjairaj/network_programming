@@ -8,3 +8,8 @@
 2. socket_setup.c
     - Builds on showipc.
     - Uses the res from getaddrinfo to create a socket to the IP/domain supplied to getaddrinfo.
+
+3. bind_setup.c
+    - Builds on socket_setup.c
+    - Use setsockopt to handle "address already in use errors".
+    - Bind the socket to the address received as a response from getaddrinfo.
