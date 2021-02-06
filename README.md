@@ -13,3 +13,8 @@
     - Builds on socket_setup.c
     - Use setsockopt to handle "address already in use errors".
     - Bind the socket to the address received as a response from getaddrinfo.
+
+4. connect_setup.c
+    - Build on bind_setup.c
+    - We don't call bind here because we don't need to know about the local port that we are communicating through. The server can get the random port the kernel assigns to this connection.
+    - This is what a typical client code will do. Client normally don't need to bind to a specific port because they don't normally need to handle any incoming connections and hence don't need to be listening on some well known port. 
