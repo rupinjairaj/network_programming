@@ -15,7 +15,7 @@
     - Bind the socket to the address received as a response from getaddrinfo.
 
 4. connect_setup.c
-    - Build on bind_setup.c
+    - Builds on bind_setup.c
     - We don't call bind here because we don't need to know about the local port that we are communicating through. The server can get the random port the kernel assigns to this connection.
     - This is what a typical client code will do. Client normally don't need to bind to a specific port because they don't normally need to handle any incoming connections and hence don't need to be listening on some well known port. 
 
@@ -26,3 +26,7 @@
     - bind is necessary here because we want to fix the port through which we will handle incoming connections.
     - A client 'connect's to a specified port that the server is listening on(the port the server socket is bound to with bind). The server socket will be listening on this port. The incoming client connection will be queued to be accepted. When we call accept to fetch this pending connection. accept returns a brand new socket file descriptor to use for this connection. 
     - accept also populates a value-result parameter with the client address info.
+
+6. send_setup.c & recv_setup.c
+    - Builds on top of listen_accept.c
+    - Shows the use of send and recv between an extremely simple client/server program.
