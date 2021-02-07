@@ -48,6 +48,10 @@
     - Returns the hostname of the system it is called on.
     - Can be used with *gethostbyname* to fetch the system's IP address.
 
+11. client.c & server.c
+    - Simple client-server example code to demonstrate socket communication using the concepts mentioned above.
+    - Work on TCP (STREAM).
+
 ### Further reading and references
 - man pages for each function highlighted.
 - [Beej's network programming](http://beej.us/guide/bgnet/html/)
