@@ -53,7 +53,12 @@
     - Work on TCP (STREAM).
 
 12. poll_stdin.c
-    - A simple example to show how to use *poll*. The *poll* syscall parameters and how to handle it's result to check for which event occurred in which file descriptor. 
+    - A simple example to show how to use *poll*. The *poll* syscall parameters and how to handle it's result to check for which event occurred in which file descriptor.
+
+13. poll_sv.c
+    - A server that uses *poll* to display non-blocking IO for a simple broadcast chat application.
+    - Scales(memory wise, not performance wise) for large number of clients by *realloc*ating the *poll* array of structs that house the file descriptors.
+    - Obvious issue is that when a new client joins the fd_count is updated (increased) forcing the loop to run one more time to check for events.  
 
 ### Further reading and references
 - man pages for each function highlighted.
