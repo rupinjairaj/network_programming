@@ -52,6 +52,9 @@
     - Simple client-server example code to demonstrate socket communication using the concepts mentioned above.
     - Work on TCP (STREAM).
 
+12. poll_stdin.c
+    - A simple example to show how to use *poll*. The *poll* syscall parameters and how to handle it's result to check for which event occurred in which file descriptor. 
+
 ### Further reading and references
 - man pages for each function highlighted.
 - [Beej's network programming](http://beej.us/guide/bgnet/html/)
