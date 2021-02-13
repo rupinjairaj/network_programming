@@ -63,6 +63,9 @@
 14. select_stdin.c
    - A simple example to show how to use the *select* syscall, its parameters and how to handle it's result to check for which event occurred.
 
+15. select_sv.c
+    - A server that uses *select* to demonstrate non-blocking IO for a simple broadcast chat application.
+
 ### Further reading and references
 - man pages for each function highlighted.
 - [Beej's network programming](http://beej.us/guide/bgnet/html/)
